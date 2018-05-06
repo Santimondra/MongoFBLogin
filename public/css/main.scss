@@ -1,0 +1,55 @@
+$colorDarkBrown: #28190f;
+$colorBrown:#3d2614;
+$colorDarkOrange:#ff6400;
+$colorOrange:#ff9000;
+$colorYellow:#ffdf00;
+$colorBeige:#eae1d3;
+
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background: $colorBeige;
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: $colorBeige;
+    }
+    &::-webkit-scrollbar{
+        width: 10px;
+        background-color: $colorBeige;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: $colorDarkBrown;
+        border-radius: 5px;
+    }
+    .banner {
+        //background-image: url(../images/Banner.png);
+        //background-size: cover;
+        //background-repeat: no-repeat;
+        background: $colorBeige;
+        width: 100%;
+        height: 80vh;
+    }
+    .promoBanner {
+        //background-image: url(../images/promoBanner.png);
+        //background-size: cover;
+        //background-repeat: no-repeat;
+        background: $colorBrown;
+        width: 100%;
+        height: 40vh;
+    }
+    .products {
+        width: 100%;
+        height: 1800px;
+    }
+}
+
+footer {
+    //background-image: url(../images/footer.png);
+    //background-size: cover;
+    //background-repeat: no-repeat;
+    background: $colorBrown;
+    width: 100%;
+    height: 20vh;
+}

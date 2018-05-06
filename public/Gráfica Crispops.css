@@ -1,0 +1,29 @@
+@charset "utf-8";
+	.productos
+{
+	background : #EAE1D3;
+	background : rgba(234, 225, 211, 1);
+	width : 1367px;
+	height : 2128px;
+}
+.promoBanner
+{
+	background-image : url(promoBanner.png);
+	background-repeat : no-repeat;
+	width : 1366px;
+	height : 308px;
+}
+.Banner
+{
+	background-image : url(Banner.png);
+	background-repeat : no-repeat;
+	width : 1366px;
+	height : 614px;
+}
+.promoBanner_1_
+{
+	background-image : url(promoBanner_1_.png);
+	background-repeat : no-repeat;
+	width : 1366px;
+	height : 155px;
+}

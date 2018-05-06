@@ -10,9 +10,11 @@ app.engine("hbs", consolidate.handlebars);
 app.set("views", "./views");
 app.set("view engine", "hbs");
 
+app.use(express.static("public"));  
+
 MongoClient.connect("mongodb://localhost:27017", (err, client) => {
     if(err) throw err;
-    db = client.db("facebook");
+    db = client.db("crispops");
     app.listen(5000);
 });
 

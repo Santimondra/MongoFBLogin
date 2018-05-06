@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Facebook</title>
-    <style>
-        h1, h2, p{
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        }
-    </style>
+    <title>Crispops</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
 </head>
 <body>
-    <H1>HOLAAAA</H1>
-    <p>Esto Es Un Ejemplo Para Login de Face</p>
-
+    <section class="banner"></section>
+    <section class="promoBanner"></section>
+    <section class="products"></section>
     
-<script>
+
+
+{{!-- <script>
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '{your-app-id}',
+      appId      : '2156961914590456',
       cookie     : true,
       xfbml      : true,
-      version    : '{latest-api-version}'
+      version    : 'v2.8'
     });
       
     FB.AppEvents.logPageView();   
@@ -36,7 +37,21 @@
      js.src = "https://connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-</script>
+
+    
+    FB.getLoginStatus(function(response) {
+        //statusChangeCallback(response);
+        console.log(response);
+    });
+
+
+    function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+    });
+    }
+</script> --}}
 
 </body>
+<footer></footer>
 </html>
