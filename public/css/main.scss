@@ -9,6 +9,7 @@ $colorBeige:#eae1d3;
 
 h1, h2, h3, h4, h5, h6, p, span, li, input, button{
     font-family: 'Encode Sans Semi Condensed', sans-serif;
+    color: $colorDarkBrown;
 }
 
 body {
@@ -39,7 +40,7 @@ body {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
         img{
             margin-top: 4%;
             width: 150px;
@@ -70,7 +71,7 @@ body {
         justify-content: space-around;
         align-content: center;
         align-items: center;
-        box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.5);
         .info{
             span{
                 color: #ffffff;
@@ -79,7 +80,7 @@ body {
             h2{
                 color: $colorYellow;
                 margin: 0;
-                font-size: 24px;
+                font-size: 22px;
             }
         }
         .irAhora{
@@ -107,10 +108,97 @@ body {
             }
         }
     }
-    .products {
+    .tienda {
         width: 100%;
         height: 1800px;
-        box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.5);
+        box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.5);
+        display: flex; 
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        .title{
+            margin: 25px 0 ;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: center;
+            align-items: center;
+            width: 75%;
+            h1{
+                font-size: 20px;
+            }
+            .cart{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-content: center;
+                align-items: baseline;
+                width: 150px;
+                img{
+                    width: 25px;
+                }
+                h2{
+                    font-size: 20px;
+                    display: inline;
+                }
+                span{
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .content{
+            width: 80%;
+            display: flex;
+            align-content: center;
+            align-items: flex-start;
+            .filtros{
+                flex: 25% 0 0;
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                align-items: center;
+                input, button {
+                    box-sizing: border-box;
+                    margin-top: 6%;
+                    border: none;
+                    width: 100%;;
+                    outline: none;
+                    padding: 8px 15px;
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+                }
+
+                button {
+                    padding: 15px 10px;
+                    background: white;
+                    font-weight: 600;
+                    font-size: 24;
+                    transition: all .15s ease;
+                    &:hover {
+                        background: $colorDarkOrange;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .items{
+                flex: 75% 0 0;
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                padding: 0;
+                .producto{
+                    background: white;
+                    box-sizing: border-box;
+                    height: 280px;
+                    flex: 31.33% 0 0;
+                    margin: 2% 0 0 2%;
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+                }
+            }
+        }
     }
 }
 
