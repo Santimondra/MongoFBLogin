@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed:300,400,500,600,700");
+h1, h2, h3, h4, h5, h6, p, span, li, input, button {
+  font-family: 'Encode Sans Semi Condensed', sans-serif;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -17,24 +22,93 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
   background-color: #28190f;
-  border-radius: 5px;
+}
+
+body header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+body header img {
+  margin-top: 4%;
+  width: 150px;
+  filter: drop-shadow(0px 3px 1px rgba(0, 0, 0, 0.5));
 }
 
 body .banner {
-  background: #eae1d3;
   width: 100%;
-  height: 80vh;
+  height: 65vh;
+}
+
+body .banner img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: -9;
 }
 
 body .promoBanner {
-  background: #3d2614;
+  background: linear-gradient(115deg, #3d2614 50%, #382110 50.1%, #3d2614 70%);
   width: 100%;
-  height: 40vh;
+  height: 25vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.5);
+}
+
+body .promoBanner .info span {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+body .promoBanner .info h2 {
+  color: #ffdf00;
+  margin: 0;
+  font-size: 24px;
+}
+
+body .promoBanner .irAhora {
+  margin-left: -70px;
+  margin-right: 100px;
+  padding: 10px 15px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #28190f;
+  background: #ffdf00;
+  text-align: center;
+  border: none;
+  outline: none;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  transition: all .15s ease;
+}
+
+body .promoBanner .irAhora img {
+  width: 20px;
+  height: 14px;
+  margin-left: 10px;
+}
+
+body .promoBanner .irAhora:hover {
+  background: #ffd000;
+  box-shadow: none;
+  cursor: pointer;
 }
 
 body .products {
   width: 100%;
   height: 1800px;
+  box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 footer {

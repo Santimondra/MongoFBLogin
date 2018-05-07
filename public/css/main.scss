@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed:300,400,500,600,700');
 $colorDarkBrown: #28190f;
 $colorBrown:#3d2614;
 $colorDarkOrange:#ff6400;
 $colorOrange:#ff9000;
+$colorDarkYellow:#ffd000;
 $colorYellow:#ffdf00;
 $colorBeige:#eae1d3;
 
+h1, h2, h3, h4, h5, h6, p, span, li, input, button{
+    font-family: 'Encode Sans Semi Condensed', sans-serif;
+}
 
 body {
     padding: 0;
@@ -21,27 +26,91 @@ body {
     }
     &::-webkit-scrollbar-thumb{
         background-color: $colorDarkBrown;
-        border-radius: 5px;
     }
-    .banner {
+    header {
         //background-image: url(../images/Banner.png);
         //background-size: cover;
         //background-repeat: no-repeat;
-        background: $colorBeige;
         width: 100%;
-        height: 80vh;
+        height: 10vh;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+        img{
+            margin-top: 4%;
+            width: 150px;
+            filter: drop-shadow(0px 3px 1px rgba(0, 0, 0, 0.5));
+            
+        }
+    }
+    .banner{
+        width: 100%;
+        height: 65vh;
+        img {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: -9;
+        }
     }
     .promoBanner {
         //background-image: url(../images/promoBanner.png);
         //background-size: cover;
         //background-repeat: no-repeat;
-        background: $colorBrown;
+        background: linear-gradient(115deg,$colorBrown 50%, #382110 50.1%,$colorBrown 70%);;
         width: 100%;
-        height: 40vh;
+        height: 25vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+        align-items: center;
+        box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.5);
+        .info{
+            span{
+                color: #ffffff;
+                font-size: 14px;
+            }
+            h2{
+                color: $colorYellow;
+                margin: 0;
+                font-size: 24px;
+            }
+        }
+        .irAhora{
+            margin-left: -70px;
+            margin-right: 100px;
+            padding: 10px 15px;
+            font-size: 20px;
+            font-weight: 500;
+            color: $colorDarkBrown;
+            background: $colorYellow;
+            text-align: center;
+            border: none;
+            outline: none;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            transition: all .15s ease;
+            img{
+                width: 20px;
+                height: 14px;
+                margin-left: 10px;
+            }
+            &:hover{
+                background: $colorDarkYellow;
+                box-shadow: none;
+                cursor: pointer;
+            }
+        }
     }
     .products {
         width: 100%;
         height: 1800px;
+        box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.5);
     }
 }
 
