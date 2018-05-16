@@ -14,7 +14,9 @@
 
 <body>
     <header>
-        <img src="/images/logoCrispops.png" alt="Logo Crispops">
+        <a href="/">
+            <img src="/images/logoCrispops.png" alt="Logo Crispops">
+        </a>
     </header>
     <section class="tienda">
         <div class="title">
@@ -27,17 +29,36 @@
                     <span>Numero de Productos:</span>
                     <h2 class="carrito">0</h2>
                     <div>
-                        <a href="/checkout"><button>VER CARRITO</button></a>
-                        <a href="/"><button class="vaciar">VACIAR CARRITO</button></a>
+                        <a href="/checkout">
+                            <button>VER CARRITO</button>
+                        </a>
+                        <a href="/productos/{{producto._id}}">
+                            <button class="vaciar">VACIAR CARRITO</button>
+                        </a>
                     </div>
                 </div>
             </article>
         </div>
-        <div>
-        <h1>Chocolate {{producto.sabor}}</h1>
-        <img src="{{producto.imagen}}" alt="">
-        <p>{{producto.detalles}}</p>
-    </div>
+
+        <section class="producto">
+            <div class="imagen">
+                <img src="{{producto.imagen}}" alt="Chocolate {{producto.sabor}}">
+                <p>Chocolate {{producto.sabor}}</p>
+            </div>
+            <div class="caracteristicas">
+                <h1>Chocolate {{producto.sabor}}</h1>
+                <h2>Tamaño: <b>{{producto.tamano}}</b></h2>
+                <h3>Pedido Minimo: <b>{{producto.pedidoMinimo}} Unidades</b></h3>
+                <p>{{producto.detalles}}</p>
+                <div data-id="{{this._id}}">
+                    <button class="anadir">
+                        <b>Añadir al Carrito</b>
+                    </button>
+                </div>
+            </div>
+        </section>
+
     </section>
-    
+    <script src="/js/cliente.js"></script>
+    <script src="/js/productos.js"></script>
 </body>

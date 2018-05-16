@@ -1,6 +1,6 @@
 console.log(arreglo);
 
-fetch('http://localhost:1234/productosPorIds?ids='+arreglo)
+fetch('http://localhost:5000/productosPorIds?ids='+arreglo)
 .then(function(res){
     return res.json();
 })
