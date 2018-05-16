@@ -1,219 +1,273 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crispops Tienda</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
 </head>
+
 <body>
     <header>
         <img src="/images/logoCrispops.png" alt="Logo Crispops">
     </header>
+    {{!
     <section class="banner">
         <img src="" alt="Foto de Banner">
     </section>
+    --}}
     <section class="promoBanner">
 
         <div class="info">
-            <span>NO TE LOS PIERDAS <b>¡VISITANOS YA!</b></span>
+            <span>NO TE LOS PIERDAS
+                <b>¡VISITANOS YA!</b>
+            </span>
             <h2>DESCUENTOS ESPECIALES </br> Y PAQUETES EXCLUSIVOS</h2>
         </div>
         <button class="irAhora">
             Ir Ahora
             <img src="/images/irAhora.png" alt="→">
-         </button>
+        </button>
     </section>
+
     <section class="tienda">
         <div class="title">
             <h1>PRODUCTOS</h1>
             <article class="cart">
-                <h2>$0</h2>
-                <span>0 Productos</span>
+                <h2 class="carrito">0</h2>
+                <span>Productos</span>
                 <img src="/images/carrito.png" alt="Carrito">
             </article>
         </div>
         <section class="content">
             <div class="filtros">
                 <input type="text" placeholder="Buscar...">
-                <button class="activo">TODO</button>
-                <article class="sabor">
+                <a href="/">
+                    <button class="activo">TODO</button>
+                </a>
+                <article class="filtro sabor">
                     <div>
                         <h2>SABOR</h2>
                         <img src="/images/arrowDown.png" alt="Arrow">
-                    </div>       
-                    <button>De Leche</button>
-                    <button>Blanco</button>
-                    <button>Oscuro</button>
-                    <button>Galleta</button>
+                    </div>
+                    <a href="/?sabor=conLeche">
+                        <button class="innactivo">DE LECHE</button>
+                    </a>
+                    <a href="/?sabor=Blanco">
+                        <button class="innactivo">BLANCO</button>
+                    </a>
+                    <a href="/?sabor=Negro">
+                        <button class="innactivo">OSCURO</button>
+                    </a>
+                    <a href="/?sabor=Galletas">
+                        <button class="innactivo">GALLETA</button>
+                    </a>
                 </article>
-                <article class="color">
+                <article class="filtro color">
                     <div>
-                        <h2>COLOR</h2>
+                        <h2>PEDIDO MIN</h2>
                         <img src="/images/arrowDown.png" alt="Arrow">
-                    </div> 
-                    <button>Originales</button>
-                    <button>1 Color</button>
-                    <button>2 Colores</button>
-                    <button>3 o más Colores</button>
+                    </div>
+                    <a href="/?pedidoMinimo=6">
+                        <button class="innactivo">6</button>
+                    </a>
+                    <a href="/?pedidoMinimo=8">
+                        <button class="innactivo">8</button>
+                    </a>
+                    <a href="/?pedidoMinimo=10">
+                        <button class="innactivo">10</button>
+                    </a>
+                    <a href="/?pedidoMinimo=15">
+                        <button class="innactivo">15</button>
+                    </a>
                 </article>
-                <article class="tamano">
+                <article class="filtro tamano">
                     <div>
                         <h2>TAMAÑO</h2>
                         <img src="/images/arrowDown.png" alt="Arrow">
-                    </div> 
-                    <button>4 Oz</button>
-                    <button>9 Oz</button>
-                    <button>16 Oz</button>
+                    </div>
+                    <a href="/?tamano=4oz">
+                        <button class="innactivo">4 Oz</button>
+                    </a>
+                    <a href="/?tamano=9oz">
+                        <button class="innactivo">9 Oz</button>
+                    </a>
+                    <a href="/?tamano=16oz">
+                        <button class="innactivo">16 Oz</button>
+                    </a>
                 </article>
-                <article class="precio">
+                <article class="filtro precio">
                     <div>
-                        <h2>PRECIO</h2>
+                        <h2>PRECIO ($)</h2>
                         <img src="/images/arrowDown.png" alt="Arrow">
-                    </div> 
-                    <button>$1</button>
-                    <button>$1,50</button>
-                    <button>$2,50</button>
+                    </div>
+                    <a href="/?precio=1">
+                        <button class="innactivo">1</button>
+                    </a>
+                    <a href="/?precio=2">
+                        <button class="innactivo">2</button>
+                    </a>
+                    <a href="/?precio=3">
+                        <button class="innactivo">3</button>
+                    </a>
                 </article>
             </div>
             <div class="items">
-                <article class="producto">
-                    <img src="/images/ejemploConLogo.png" alt="Imagen Producto">
+                {{#each productos}}
+                <article class="producto" data-id="{{this._id}}">
+                    <img src={{imagen}} alt="Imagen Producto {{tamano}}">
                     <div class="name">
-                        <span>Crispops <b>4 Oz</b></span>
-                        <h2>Chocolate Blanco</h2>
+                        <span>Crispops
+                            <b>{{tamano}}</b>
+                        </span>
+                        <h2>Chocolate {{sabor}}</h2>
                     </div>
                     <div class="info">
                         <div>
-                            <span>Crispops <b>4 Oz</b></span>
-                            <h2>Chocolate Blanco</h2>
+                            <span>Crispops
+                                <b>{{tamano}}</b>
+                            </span>
+                            <h2>Chocolate {{sabor}}</h2>
                         </div>
                         <div>
-                        <h1>$1</h1>
-                        <span class="unidades">Pedido Minimo: <b>15 Und</b></span>
+                            <h1>${{precio}}</h1>
+                            <span class="unidades">Pedido Minimo:
+                                <b>{{pedidoMinimo}} Und</b>
+                            </span>
                         </div>
                         <div>
-                        <button class="detalles">Ver Detalles</button>
-                        <button class ="anadir"><b>Añadir al Carrito</b></button>
+                            <a href="/productos/{{_id}}">
+                                <button class="detalles">Ver Detalles</button>
+                            </a>
+                             <button class="anadir">
+                                 <b>Añadir al Carrito</b>
+                            </button>
                         </div>
                     </div>
                 </article>
-                <article class="producto">
-                    <img src="/images/ejemploProducto.png" alt="Imagen Producto">
-                    <div class="name">
-                        <span>Crispops <b>4 Oz</b></span>
-                        <h2>Chocolate Blanco</h2>
-                    </div>
-                    <div class="info">
-                        <div>
-                            <span>Crispops <b>4 Oz</b></span>
-                            <h2>Chocolate Blanco</h2>
-                        </div>
-                        <div>
-                        <h1>$1</h1>
-                        <span class="unidades">Pedido Minimo: <b>15 Und</b></span>
-                        </div>
-                        <div>
-                        <button class="detalles">Ver Detalles</button>
-                        <button class ="anadir"><b>Añadir al Carrito</b></button>
-                        </div>
-                    </div>
-                </article>
-                <article class="producto">
-                    <img src="/images/ejemploAmor.png" alt="Imagen Producto">
-                    <div class="name">
-                        <span>Crispops <b>4 Oz</b></span>
-                        <h2>Chocolate Blanco</h2>
-                    </div>
-                    <div class="info">
-                        <div>
-                            <span>Crispops <b>4 Oz</b></span>
-                            <h2>Chocolate Blanco</h2>
-                        </div>
-                        <div>
-                        <h1>$1</h1>
-                        <span class="unidades">Pedido Minimo: <b>15 Und</b></span>
-                        </div>
-                        <div>
-                        <button class="detalles">Ver Detalles</button>
-                        <button class ="anadir"><b>Añadir al Carrito</b></button>
-                        </div>
-                    </div>
-                </article>
-                <article class="producto">
-                    <img src="/images/ejemploOreo.png" alt="Imagen Producto">
-                    <div class="name">
-                        <span>Crispops <b>4 Oz</b></span>
-                        <h2>Chocolate Blanco</h2>
-                    </div>
-                    <div class="info">
-                        <div>
-                            <span>Crispops <b>4 Oz</b></span>
-                            <h2>Chocolate Blanco</h2>
-                        </div>
-                        <div>
-                        <h1>$1</h1>
-                        <span class="unidades">Pedido Minimo: <b>15 Und</b></span>
-                        </div>
-                        <div>
-                        <button class="detalles">Ver Detalles</button>
-                        <button class ="anadir"><b>Añadir al Carrito</b></button>
-                        </div>
-                    </div>
-                </article>
-                
-                
-                
-                {{!--{{#each producto}}
-                    <article class="producto">
-
-                    </article>
-                {{/each}}--}}
+                {{/each}}
             </div>
         </section>
     </section>
-    
 
 
-{{!-- <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '2156961914590456',
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v2.8'
-    });
-      
-    FB.AppEvents.logPageView();   
-      
-  };
+    <script>
+        // FILTROS
+        var filtros = document.querySelectorAll(".filtros article div");
+        var acciones = document.querySelectorAll(".filtros article");
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+        acciones.forEach(function (articulo) {
+            filtros.forEach(function (pestana) {
+                pestana.addEventListener("click", function () {
+                    var nombre = articulo.className;
+                    console.log(nombre);
+                    if (nombre.includes("contraido")) {
+                        var newNombre = nombre.replace("contraido", " ");
+                        articulo.className = newNombre;
+                    } else {
+                        articulo.className = nombre + " contraido";
+                    }
+                });
+            });
+        });
 
-    
-    FB.getLoginStatus(function(response) {
-        //statusChangeCallback(response);
-        console.log(response);
-    });
+        /*
+                filtros[0].addEventListener("click", function () {
+                    var nombre = acciones[0].className;
+                    console.log(nombre);
+                    if (nombre.includes("contraido")) {
+                        var newNombre = nombre.replace("contraido", " ");
+                        acciones[0].className = newNombre;
+                    } else {
+                        acciones[0].className = nombre + " contraido";
+                    }
+                });
+
+                filtros[1].addEventListener("click", function () {
+                    var nombre = acciones[1].className;
+                    console.log(nombre);
+                    if (nombre.includes("contraido")) {
+                        var newNombre = nombre.replace("contraido", " ");
+                        acciones[1].className = newNombre;
+                    } else {
+                        acciones[1].className = nombre + " contraido";
+                    }
+                });
+
+                filtros[2].addEventListener("click", function () {
+                    var nombre = acciones[2].className;
+                    console.log(nombre);
+                    if (nombre.includes("contraido")) {
+                        var newNombre = nombre.replace("contraido", " ");
+                        acciones[2].className = newNombre;
+                    } else {
+                        acciones[2].className = nombre + " contraido";
+                    }
+                });
+
+                filtros[3].addEventListener("click", function () {
+                    var nombre = acciones[3].className;
+                    console.log(nombre);
+                    if (nombre.includes("contraido")) {
+                        var newNombre = nombre.replace("contraido", " ");
+                        acciones[3].className = newNombre;
+                    } else {
+                        acciones[3].className = nombre + " contraido";
+                    }
+                });
+        */
+        var botones = document.querySelectorAll(".filtros button");
+
+        botones.forEach(function (boton) {
+            boton.addEventListener("click", function () {
+                var nombre = boton.className;
+                console.log(nombre);
+                if (nombre.includes("inactivo")) {
+                    var newNombre = nombre.replace("inactivo", "activo");
+                    boton.className = newNombre;
+                } else {
+                    boton.className = nombre + " inactivo";
+                }
+            });
+        });
 
 
-    function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
-    });
-    }
-</script> --}}
+        // CARRITO
+        function actualizarCarrito (){
+            document.querySelector('.carrito').innerHTML = arreglo.length;
+        }
+
+        var arreglo = JSON.parse(localStorage.getItem('arreglo'));
+        if(arreglo == null) arreglo = [];
+
+        actualizarCarrito();
+        
+        document.querySelectorAll('.anadir').forEach(function (button) {
+            button.addEventListener('click', function () {
+                var id = button.parentNode.parentNode.getAttribute('data-id');
+                console.log(button.parentNode.parentNode.getAttribute('data-id'));
+
+                if (arreglo.indexOf(id) >= 0) {
+                    console.log('paila');
+                    return;
+                }
+
+                arreglo.push(id);
+                actualizarCarrito();
+                localStorage.setItem('arreglo', JSON.stringify(arreglo));
+            });
+        });
+
+        console.log(arreglo);
+    </script>
+
 
 </body>
 <footer></footer>
+
 </html>

@@ -1,0 +1,76 @@
+{
+    "crispops": [
+        {
+            "imagen":"/images/ejemploProducto.png",
+            "tamano": "4oz",
+            "sabor": "Chocolate Blanco",
+            "precio": 1,
+            "pedidoMinimo": 15,
+            "detalles": "Vasitos de deliciosas crispetas cubiertas con chocolate blanco y decoradas con grageas de diferentes colores"              
+        },
+        {
+            "imagen":"/images/ejemploProducto.png",
+            "tamano": "4oz",
+            "sabor": "Chocolate con Leche",
+            "precio": 1,
+            "pedidoMinimo": 15,
+            "detalles": "Vasitos de deliciosas crispetas cubiertas con chocolate blanco y decoradas con grageas de diferentes colores"              
+        },
+        {
+            "imagen":"/images/ejemploProducto.png",
+            "tamano": "4oz",
+            "sabor": "Chocolate Oscuro",
+            "precio": 1,
+            "pedidoMinimo": 15,
+            "detalles": "Vasitos de deliciosas crispetas cubiertas con chocolate blanco y decoradas con grageas de diferentes colores"              
+        },
+        {
+            "imagen":"/images/ejemploProducto9.png",
+            "tamano": "9oz",
+            "sabor": "Chocolate Blanco",
+            "precio": 2,
+            "pedidoMinimo": 10,
+            "detalles": "Vasitos de deliciosas crispetas cubiertas con chocolate blanco y decoradas con grageas de diferentes colores"              
+        },
+        {
+            "imagen":"/images/ejemploProducto9.png",
+            "tamano": "9oz",
+            "sabor": "Chocolate con Leche",
+            "precio": 2,
+            "pedidoMinimo": 10,
+            "detalles": "Vasitos de deliciosas crispetas cubiertas con chocolate blanco y decoradas con grageas de diferentes colores"              
+        },
+        {
+            "imagen":"/images/ejemploProducto9.png",
+            "tamano": "9oz",
+            "sabor": "Chocolate Oscuro",
+            "precio": 2,
+            "pedidoMinimo": 10,
+            "detalles": "Vasitos de deliciosas crispetas cubiertas con chocolate blanco y decoradas con grageas de diferentes colores"              
+        },
+        {
+            "imagen":"/images/ejemploProducto16.png",
+            "tamano": "16oz",
+            "sabor": "Chocolate Blanco",
+            "precio": 3,
+            "pedidoMinimo": 8,
+            "detalles": "Vasitos de deliciosas crispetas cubiertas con chocolate blanco y decoradas con grageas de diferentes colores"              
+        },
+        {
+            "imagen":"/images/ejemploProducto16.png",
+            "tamano": "16oz",
+            "sabor": "Chocolate con Leche",
+            "precio": 3,
+            "pedidoMinimo": 8,
+            "detalles": "Vasitos de deliciosas crispetas cubiertas con chocolate blanco y decoradas con grageas de diferentes colores"              
+        },
+        {
+            "imagen":"/images/ejemploProducto16.png",
+            "tamano": "16oz",
+            "sabor": "Chocolate Oscuro",
+            "precio": 3,
+            "pedidoMinimo": 8,
+            "detalles": "Vasitos de deliciosas crispetas cubiertas con chocolate blanco y decoradas con grageas de diferentes colores"              
+        }        
+    ]
+}

@@ -7,10 +7,11 @@ $colorDarkYellow:#ffd000;
 $colorYellow:#ffdf00;
 $colorBeige:#eae1d3;
 
-h1, h2, h3, h4, h5, h6, p, span, li, input, button{
+a, h1, h2, h3, h4, h5, h6, p, span, li, input, button{
     font-family: 'Encode Sans Semi Condensed', sans-serif;
     color: $colorDarkBrown;
     margin: 0;
+    text-decoration: none;
 }
 h1{
     font-size: 22px;
@@ -174,7 +175,9 @@ body {
                 align-items: center;
                 padding-right: 15px;
                 padding-bottom: 15px;
-                
+                a{
+                    width: 100%;
+                }
                 input, button {
                     box-sizing: border-box;
                     margin-top: 0%;
@@ -207,6 +210,7 @@ body {
                     border-top: solid 1px $colorDarkBrown;
                     width: 100%;
                     margin-top: 15px;
+                    transition: all .25s ease;
                     div{
                         margin: 0 auto;
                         width: 90%;
@@ -214,10 +218,13 @@ body {
                         flex-direction: row;
                         justify-content: space-between;
                         align-items: baseline;
+                        button{
+                            transition: all .25s ease;
+                        }
                         img{
                             width: 18px;
                             transition: all .25s ease;
-                            transform: rotate(0deg);
+                            transform: rotate(180deg);
                         }
                         h2{ 
                             font-size: 16px;
@@ -226,16 +233,23 @@ body {
                             text-align: center;
                         }
                         &:hover {
-                            img{
-                                transform: rotate(180deg);
-                            }
                             h2{
                                 font-weight: 700;
                             }
                         }
                     } 
                 }
+                .contraido{
+                    button {
+                        display: none; 
+                    }
+                    img{
+                        transform: rotate(0deg);
+                    }
+                }
+                
             }
+
             .items{
                 flex: 80% 0 0;
                 display: flex;
@@ -292,7 +306,7 @@ body {
                             box-sizing: border-box;
                             margin-top: 2%;
                             border: none;
-                            width: 160px;
+                            width: 100%;
                             outline: none;
                             padding: 8px 15px;
                             background: white;
