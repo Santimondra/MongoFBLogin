@@ -1,18 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-     <h1>Checkout</h1>
-    <h2>Carrito: <span class="carrito">0</span></h2>
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 
-    <ul class="lista"></ul>
-    
+</head>
+
+<body>
+    <header>
+        <img src="/images/logoCrispops.png" alt="Logo Crispops">
+    </header>
+    <section class="tienda">
+        <div class="title">
+            <h1>CHECKOUT</h1>
+            <article class="cart">
+                <h2 class="carrito">0</h2>
+                <span>Productos</span>
+                <img src="/images/carrito.png" alt="Carrito">
+                <div class="contenido">
+                    <span>Numero de Productos:</span>
+                    <h2 class="carrito">0</h2>
+                    <div>
+                        <a href="/checkout">
+                            <button>VER CARRITO</button>
+                        </a>
+                        <a href="/">
+                            <button class="vaciar">VACIAR CARRITO</button>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <h2 class="grande">Carrito:
+            <span class="carrito grande">0</span>
+        </h2>
+
+        <ul class="lista"></ul>
+    </section>
+
+
+
     <script src="js/cliente.js"></script>
     <script src="js/checkout.js"></script>
 </body>
+
 </html>

@@ -24,7 +24,9 @@ span, p, button, li {
     font-weight: 500;
     font-size: 14px;
 }
-
+.grande {
+    font-size: 40px;
+}
 body {
     padding: 0;
     margin: 0;
@@ -149,6 +151,8 @@ body {
                 align-content: center;
                 align-items: baseline;
                 width: 150px;
+                padding: 0 15px;
+                position: relative;
                 img{
                     width: 25px;
                 }
@@ -158,6 +162,57 @@ body {
                 }
                 span{
                     font-size: 12px;
+                }
+                &:hover{
+                    .contenido{
+                        display: flex; 
+                    }
+                }
+                .contenido{
+                    position: absolute;
+                    width: 100%;
+                    padding: 15px 0;
+                    margin-left: -15px;
+                    top: 100;
+                    z-index: 100;
+                    flex-direction: column;
+                    align-items: center;
+                    background: white;
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+                    display: none;
+                    transition: all .25s ease;
+                    &:hover{
+                        display: flex;
+                    }
+                    span{
+                        font-size: 16px;
+                    }
+                    h2{
+                        margin-top: 10px;
+                        font-size: 34px;
+                    }
+                    div{
+                        margin-top: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        button{
+                            box-sizing: border-box;
+                            margin-top: 0%;
+                            margin-bottom: 5px;
+                            border: none;
+                            width: 100%;;
+                            outline: none;
+                            font-weight: 600;
+                            padding: 8px 8px;
+                            background: $colorBeige;
+                            box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+                            transition: all .25s ease;
+                            &:hover {
+                                background: linear-gradient(135deg, $colorYellow 0%,$colorOrange 100%);
+                                cursor: pointer;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -301,6 +356,9 @@ body {
                         }
                         .unidades{
                             font-size: 12px;
+                        }
+                        a{
+                            width: 100%;
                         }
                         button {
                             box-sizing: border-box;

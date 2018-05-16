@@ -51,6 +51,20 @@ app.get("/checkout", (req, res) => {
 });
 
 
+app.get('/productos/:id', (req, res) => {
+    var prod = db.collection('productos')
+        .find({
+            _id: new ObjectID(req.params.id)
+        })
+        .toArray((err, result) => {
+            // console.log(result[0]);
+            res.render('producto', {
+                producto: result[0]
+            });
+        });
+});
+
+
 app.get('/productosPorIds', (req, res) => {
     var arreglo = req.query.id.split(',');
     arreglo = arreglo.map(function(id) {

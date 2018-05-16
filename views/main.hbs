@@ -43,11 +43,11 @@
                 <span>Productos</span>
                 <img src="/images/carrito.png" alt="Carrito">
                 <div class="contenido">
-                    <h2>Numero de Productos</h2>
-                    <h2 class="carrito grande">0</h2>
+                    <span>Numero de Productos:</span>
+                    <h2 class="carrito">0</h2>
                     <div>
                         <a href="/checkout"><button>VER CARRITO</button></a>
-                        <button class="vaciar">VACIAR CARRITO</button>
+                        <a href="/"><button class="vaciar">VACIAR CARRITO</button></a>
                     </div>
                 </div>
             </article>
@@ -149,7 +149,7 @@
                             </span>
                         </div>
                         <div data-id="{{this._id}}">
-                            <a href="/productos/{{_id}}">
+                        <a href="/productos/{{_id}}">
                                 <button class="detalles">Ver Detalles</button>
                             </a>
                              <button class="anadir">

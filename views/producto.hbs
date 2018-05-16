@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{sabor}}</title>
+    <title>{{producto.sabor}}</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
@@ -16,9 +16,28 @@
     <header>
         <img src="/images/logoCrispops.png" alt="Logo Crispops">
     </header>
-    <div data-id="{{this._id}}">
-        <h1>{{sabor}}</h1>
-        <img src="{{imagen}}" alt="">
-        <span>{{detalles}}</span>
+    <section class="tienda">
+        <div class="title">
+            <h1>PRODUCTOS</h1>
+            <article class="cart">
+                <h2 class="carrito">0</h2>
+                <span>Productos</span>
+                <img src="/images/carrito.png" alt="Carrito">
+                <div class="contenido">
+                    <span>Numero de Productos:</span>
+                    <h2 class="carrito">0</h2>
+                    <div>
+                        <a href="/checkout"><button>VER CARRITO</button></a>
+                        <a href="/"><button class="vaciar">VACIAR CARRITO</button></a>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div>
+        <h1>Chocolate {{producto.sabor}}</h1>
+        <img src="{{producto.imagen}}" alt="">
+        <p>{{producto.detalles}}</p>
     </div>
+    </section>
+    
 </body>
